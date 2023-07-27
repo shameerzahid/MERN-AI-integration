@@ -49,10 +49,10 @@ app.get("/api/predict", (req, res) => {
   const options = {
     mode: "text",
     pythonPath: "python", // Replace with the path to your Python executable if necessary
-    scriptPath: "F:/",
+    scriptPath: "F:/",  //path of the .py file where it lies
   };
 
-  PythonShell.run("Recognition_1.py", options, (err, results) => {
+  PythonShell.run("Recognition_1.py", options, (err, results) => {  //complete name of .py file 
     if (err) {
       console.error(err);
       return res.status(500).json({ error: "An error occurred" });
